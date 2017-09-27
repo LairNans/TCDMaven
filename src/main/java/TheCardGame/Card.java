@@ -6,4 +6,5 @@ abstract class Card {
     Card(String Race){this.Race=Race;}
 
     String getRace(){return this.Race;}
+
 }
