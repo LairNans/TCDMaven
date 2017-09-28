@@ -1,9 +1,10 @@
 package main.java.TheCardGame;
-
 import java.util.List;
 import java.util.ArrayList;
 
-public class Deck {
+//Un deck est une liste de carte, mais nous ne savons pas combien de carte il doit y avoir donc bon...
+
+public class Deck implements CardList {
     private List<Card> deck;
     /*Créer une méthode de création de deck*/
     public Deck(){
@@ -12,9 +13,12 @@ public class Deck {
 
     public List<Card> getDeck(){return this.deck;}
 
-    public void ChangeDeck(List<Card> list){this.deck=list;}
-
+    public void change(List<Card> list){this.deck=list;}
+    public int NbOfCards(){return deck.size();}
     public void Add(Card card){
         this.deck.add(card);
     }
+    public List<Card> getList(){return this.deck;}
+    public Card revealCard(int i){return this.deck.get(i);}
+    public void remove(int i){this.deck.remove(i);}
 }

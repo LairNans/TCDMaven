@@ -1,9 +1,5 @@
-package TheCardGame;
+package main.java.TheCardGame;
 
-/**
- * Hello world!
- *
- */
 public class App
 {
     public static void main( String[] args )
