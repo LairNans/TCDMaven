@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class Deck implements CardList {
     private List<Card> deck;
+    private int drawPlace=0;
     /*Créer une méthode de création de deck*/
     public Deck(){
         this.deck= new ArrayList<Card>();
@@ -19,6 +20,6 @@ public class Deck implements CardList {
         this.deck.add(card);
     }
     public List<Card> getList(){return this.deck;}
-    public Card revealCard(int i){return this.deck.get(i);}
+    public Card revealCard(int i){return this.deck.get(drawPlace);}
     public void remove(int i){this.deck.remove(i);}
 }

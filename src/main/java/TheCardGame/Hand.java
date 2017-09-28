@@ -14,9 +14,10 @@ public class Hand implements CardList {
         }
     }
 
+
     public void Draw(Deck deck){
-        this.hand.add(deck.revealCard(0));
-        deck.remove(0);
+        this.hand.add(deck.revealCard(42)); //Le 42 sert à rien, on remove toujours la première carte :)
+        deck.remove(42);
     }
 
     public void Play(Kingdom kingdom, int a){
