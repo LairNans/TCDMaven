@@ -4,7 +4,7 @@ import java.util.List;
 
 //Une main est une liste de cartes. On pioche 5 fois au départ.
 
-public class Hand implements CardList {
+public class Hand extends CardList {
     private List<Card> hand;
     public Hand(Deck deck){
         this.hand= new ArrayList<Card>();
@@ -33,4 +33,14 @@ public class Hand implements CardList {
     public List<Card> getList(){return this.hand;}
     public Card revealCard(int i){return this.hand.get(i);}
     public void remove(int i){this.hand.remove(i);}
+    public boolean isEmpty(){
+        if(this.NbOfCards()==0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

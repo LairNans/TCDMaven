@@ -1,8 +1,4 @@
-DELETE AT THE END OF THE PROJECT
+A faire:
 
-D'abord créer la classe RACE. Classe mère vide avec juste un string.
-Créer les Races sans pouvoirs d'abord.
-Créer la classe Kingdom (terrain de jeu, listes de cartes)
-Créer la classe Deck (liste de cartes )
-Créer la classe Hand (liste de cartes)
-Toutes ces listes de cartes sont fondamentalement différentes, pas les mêmes objets et méthodes différentes.
+Coder le jeu dan la classe Game.
+Coder les derniers tours.

@@ -4,9 +4,9 @@ import java.util.Random;
 //Le korrigan vole deux cartes ALEATOIRES dans la main adverse.
 
 public class Korrigan extends Card implements Effect {
-    public Korrigan(String Race){super(Race);}
+    public Korrigan(int ID){super(ID);}
 
-    public void effect(Deck deckA,Deck deckB,Kingdom kingA, Kingdom kingB,Hand handA,Hand handB, int place){
+    public void effect(Deck deck,Kingdom kingA, Kingdom kingB,Hand handA,Hand handB, int place){
         Random rando1= new Random();
         Random rando2= new Random();
 
