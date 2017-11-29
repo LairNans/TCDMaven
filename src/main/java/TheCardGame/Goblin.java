@@ -2,8 +2,11 @@ package main.java.TheCardGame;
 
 //Les gobelins font swap les mains.
 
-public class Goblin extends Card implements Effect {
-    public Goblin(int ID){super(ID);}
+public class Goblin extends Card{
+    public Goblin(int ID){
+        super(ID);
+        this.race="Goblin";
+    }
 
     public void effect(Deck deck,Kingdom kingA, Kingdom kingB,Hand handA,Hand handB, int place){
         Deck deckC=new Deck();

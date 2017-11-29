@@ -24,7 +24,7 @@ public class Deck extends CardList {
             this.Add(korrigan);
             Troll troll=new Troll(ID+6);
             this.Add(troll);
-            ID++;
+            ID+=6;
         }
     }
 

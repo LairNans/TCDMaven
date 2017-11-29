@@ -2,8 +2,11 @@ package main.java.TheCardGame;
 
 //Le Troll échange les royaumes.
 
-public class Troll extends Card implements Effect{
-    public Troll(int ID){super(ID);}
+public class Troll extends Card{
+    public Troll(int ID){
+        super(ID);
+        this.race="Troll";
+    }
 
     public void effect(Deck deck,Kingdom kingA, Kingdom kingB,Hand handA,Hand handB, int place){
         Kingdom kingC= new Kingdom();

@@ -3,8 +3,11 @@ import java.util.Random;
 
 //Le korrigan vole deux cartes ALEATOIRES dans la main adverse.
 
-public class Korrigan extends Card implements Effect {
-    public Korrigan(int ID){super(ID);}
+public class Korrigan extends Card{
+    public Korrigan(int ID){
+        super(ID);
+        this.race="Korrigan";
+    }
 
     public void effect(Deck deck,Kingdom kingA, Kingdom kingB,Hand handA,Hand handB, int place){
         Random rando1= new Random();

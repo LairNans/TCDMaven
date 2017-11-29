@@ -7,17 +7,13 @@ package main.java.TheCardGame;
 
 public class Game {
     private Deck deck;
-    private Hand handA;
-    private Hand handB;
-    private Kingdom kingA;
-    private Kingdom kingB;
+    private Player player1;
+    private Player player2;
 
     Game(){
         this.deck=new Deck();
-        this.handA=new Hand(deck);
-        this.handB=new Hand(deck);
-        this.kingA=new Kingdom();
-        this.kingB=new Kingdom();
+        this.player1=new Player(1,deck);
+        this.player2=new Player(2,deck);
     }
 
     public String play(){
@@ -28,7 +24,7 @@ public class Game {
         }
 
         //Last Turn
-        if(handA.isEmpty())
+        if(player1.getHand().isEmpty())
         {
             //last turn player B
         }
@@ -38,13 +34,13 @@ public class Game {
         }
 
         //Return name of winner
-        String winName=this.isWinner(kingA,kingB);
+        String winName=this.isWinner(player1.getKingdom(),player2.getKingdom());
         return winName;
     }
 
     public boolean End()
     {
-        if(handA.isEmpty() || handB.isEmpty())
+        if(player1.getHand().isEmpty() || player2.getHand().isEmpty())
         {
             return true;
         }
